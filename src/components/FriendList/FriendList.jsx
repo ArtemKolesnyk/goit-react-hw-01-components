@@ -4,11 +4,11 @@ import s from './Friend.module.css';
 export default function FriendList({friends}) {
     return (
         <ul className={s.list}>
-            {friends.map(friend => (
-                <li className={s.item} key={friend.id}>
-                    <span className={friend.isOnline ? s.on : s.off}>{friend.isOnline}</span>
-                    <img className={s.avatar} src={friend.avatar} alt="User avatar" width="48" />
-                    <p className={s.name}>{friend.name}</p>
+            {friends.map(({id, isOnline, avatar, name}) => (
+                <li className={s.item} key={id}>
+                    <span className={isOnline ? s.on : s.off}>{isOnline}</span>
+                    <img className={s.avatar} src={avatar} alt="User avatar" width="48" />
+                    <p className={s.name}>{name}</p>
                 </li>
             ))}
         </ul>
