@@ -5,15 +5,17 @@ import css from './Statistics.module.css';
 
 
 const Statistics = ({ title, stats, }) => {
-  const colorItem =()=> {
-     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  
+  const colorForItem = () => {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+   
   }
   return (
     <section className={css.statistics}>
       <h2 className={css.title}>{title}</h2>
         <ul className={css.list}>
           {stats.map(({ id, label, percentage}) => (
-            <li className={css.item} style={{backgroundColor: colorItem()}} key={id}>
+            <li className={css.item} style={{backgroundColor: colorForItem()}} key={id}>
               <span className={css.label}>{label}</span>
               <span className={css.percentage}>{percentage}%</span>
             </li>
