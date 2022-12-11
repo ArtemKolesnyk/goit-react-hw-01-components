@@ -17,7 +17,6 @@ return (
 
 
 FriendList.propTypes = {
-<<<<<<< HEAD
     friends: PropTypes.arrayOf(PropTypes.shape({
         avatar: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
@@ -26,11 +25,3 @@ FriendList.propTypes = {
 }
 
 export default FriendList;
-=======
-    friends: PropTypes.arrayOf({
-        avatar: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        isOnline: PropTypes.bool.isRequired,
-    }),
-}
->>>>>>> 540aadb6a63f62964ec37d9991edc9fbaad2acd1
