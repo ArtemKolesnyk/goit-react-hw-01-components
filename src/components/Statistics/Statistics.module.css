@@ -1,39 +1,58 @@
 .statistics {
-    width: 335px;
-    margin: auto;
-    border: solid 1px black;
-    background-color: aquamarine;
+  width: 335px;
+  margin: auto;
+  margin-bottom: 20px;
+  border: solid 1px black;
+    
 }
   
 .title {
-    font-size: 16p;
-    color: #333333;
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 25px;
+  font-size: 16p;
+  color: #333333;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
 }
 
 .list {
-    height: 60px;
-    display: flex;
-    list-style: none;
-    background-color: aqua;
+  height: 60px;
+  display: flex;
+  list-style: none;
 }
 
 .item {
-    width: 70px;
-    border: solid 1px black;
+  width: 70px;
+  border: solid 1px black;
+  background-color: darkgoldenrod;
+}
+
+.item.docx {  
+  background-color: green;
+}
+.item.pdf {
+  background-color: blue;
+}
+.item.mp3 {
+  background-color: aqua;
+}
+.item.psd { 
+  background-color: red;
 }
 
 .label {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-evenly;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .percentage {
-    font-size: 16px;
-    display: flex;
-    justify-content: space-evenly;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-evenly;
 }
+
+
+
+
+ 

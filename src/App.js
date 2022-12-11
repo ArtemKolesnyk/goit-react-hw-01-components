@@ -1,13 +1,13 @@
-import Profile from './components/Profile';
+import Profile from './components/profile/Profile';
 import user from './data/user.json';
 
-import Statistics from './components/Statistics';
+import Statistics from './components/statistics/Statistics';
 import data from './data/data.json';
 
-import FriendList from './components/FriendList';
+import FriendList from './components/friendList/FriendList';
 import friends from './data/friends.json';
 
-import TransactionHistory from './components/TransactionHistory';
+import TransactionsHistory from './components/transactionsHistory/TransactionHistory';
 import transactions from './data/transactions.json';
 
 
@@ -21,9 +21,9 @@ function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data} />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <Statistics title="Upload stats" stats={data}/>
+      <FriendList friends={friends}/>
+      <TransactionsHistory transactions={transactions}/>
     </div>
   );
 }
