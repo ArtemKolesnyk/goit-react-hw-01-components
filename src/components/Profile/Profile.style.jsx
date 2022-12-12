@@ -1,20 +1,22 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const Card = style.div` 
+export const Card = styled.div` 
   width: 250px;
   text-align: center;
   margin: auto;
   margin-bottom: 20px;
   border: solid 1px #89a3c3;
+  &:hover{
+   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+     0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
 `;
-// .profile:hover{
-//   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 1px 3px rgba(0, 0, 0, 0.12);
-// }
-export const Description = style.div`
+
+export const Description = styled.div`
   background-color: #97a2ae;
 `;
-export const Avatar = style.img`
+
+export const Avatar = styled.img`
   width: 128px;
   height: 128px;
   border-radius: 50%;
@@ -24,14 +26,14 @@ export const Avatar = style.img`
   background-color: #f3f6f9;
 `;
 
-export const NameCard = style.p`
+export const NameCard = styled.p`
   font-size: 18px;
   color: #333333;
   font-weight: 700;
   margin-top: 30px;
 `;
 
-export const StatsList = style.ul `
+export const StatsList = styled.ul `
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -39,7 +41,7 @@ export const StatsList = style.ul `
   border-radius: 0 0 5px 5px;
 `;
 
-export const Item = style.li` 
+export const Item = styled.li` 
   padding-bottom: 22px;
   line-height: 1.2;
   font-weight: bold;

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-//import css from './Profile.module.css';
-import {Card, Avatar, NameCard, StatsList, Description, Item} from './Profile.style';
-const Profile = ({ avatar, username, tag, location, stats }) => {
+import { Card, Avatar, NameCard, StatsList, Description, Item } from './Profile.style';
+
+const Profile = ({ avatar, username, tag, location, stats:{ followers, views, likes} }) => {
   return (
     <Card>
       <Description>
@@ -17,15 +17,15 @@ const Profile = ({ avatar, username, tag, location, stats }) => {
         <StatsList>
           <Item >
             <span className="label">Followers</span>
-            <span className="quantity">{stats.followers}</span>
+            <span className="quantity">{followers}</span>
           </Item>
           <Item>
             <span className="label">Views</span>
-            <span className="quantity">{stats.views}</span>
+            <span className="quantity">{views}</span>
           </Item>
           <Item>
             <span className="label">Likes</span>
-            <span className="quantity">{stats.likes}</span>
+            <span className="quantity">{likes}</span>
           </Item>
         </StatsList>
       </Description>
@@ -38,19 +38,12 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired
+  }),
 };
-
-Profile.defaultProps = {
-  name: 'User name',
-  tag: '@User tag',
-  location: 'User location',
-  avatar: 'https://www.flaticon.com/svg/static/icons/svg/3784/3784184.svg',
-  stats: {
-    followers: '0',
-    views: '0',
-    likes: '0',
-  },
-} 
+ 
 
 export default Profile;
