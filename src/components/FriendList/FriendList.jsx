@@ -3,21 +3,23 @@ import { FriendListItem } from "./FriendListItem";
 import { List } from './FriendList.style';
 
 const FriendList = ({friends}) => {
-return (
-  <List>  
-    <FriendListItem friends={friends}/>
-  </List>     
-)
+  return (
+    <List friends={friends}>
+      {friends.map(friend => (
+        <FriendListItem
+          key={friend.id}
+          prop={friend}
+          avatar={friend.avatar}
+          name={friend.name}
+          isOnline={friend.isOnline}/>
+      ))}  
+    </List>     
+  )
 }
 
 
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        avatar: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        isOnline: PropTypes.bool.isRequired,
-    })).isRequired,
+  friends: PropTypes.array.isRequired,
 }
 
 export default FriendList;

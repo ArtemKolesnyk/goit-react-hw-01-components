@@ -4,7 +4,7 @@ export const List = styled.ul`
     margin-bottom: 20px;
 `; 
 
-export const Item = styled.li`
+export const Card = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -29,11 +29,8 @@ export const Status = styled.span`
     height: 20px;
     border-radius: 50%;
     margin: 0 15px 0 15px;
-    background-color: ${(props)=>(props.isOnline ? 'green' : 'red')};
+    background-color: ${(prop)=>(prop.isOnline ? 'green' : 'red')};
 `;
-
-
-
 
 export const Avatar = styled.img`
     border-radius: 10px;

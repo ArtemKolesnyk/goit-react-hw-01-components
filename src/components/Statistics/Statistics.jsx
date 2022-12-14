@@ -10,8 +10,7 @@ const Statistics = ({ title, stats, }) => {
   }
   return (
     <Section>
-      <Title>{title}</Title>
-      {{title} === '' && ''}
+      {{title} && <Title>{title}</Title>}
         <List>
           {stats.map(({ id, label, percentage}) => (
             <Item style={{backgroundColor: colorForItem()}} key={id}>
