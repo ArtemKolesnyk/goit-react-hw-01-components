@@ -4,7 +4,7 @@ import { Section, Title, List, Item, Categorie} from './Statistics.style';
 
 
 
-const Statistics = ({ title, stats, }) => { 
+const Statistics = ({ title, stats }) => { 
   const colorForItem = () => {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`; 
   }
